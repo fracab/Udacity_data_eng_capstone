@@ -1,0 +1,40 @@
+Flights
+
+carrier = 2-characters Airline Identifier
+fl_num = flight number
+ORIGIN = 3-characters FAA identifier of the departure airport
+DEST = 3-characters FAA identifier of the departure airport
+CRS_DEP_TIME = scheduled departure time (local time)
+CRS_ARR_TIME  = scheduled departure time (local time)
+weekday = day of the week, 0 being Sunday
+first_flight_in_ds = date of first flight in the dataset with he same carrier, number, origin, destination and time
+last_flight_in_ds = date of last flight in the dataset with he same carrier, number, origin, destination and time
+        
+    
+Airports
+
+name = Full name of the airport
+faa = 3-characters FAA identifier 
+state = 2-characters identifier of the US State
+long = longitude in decimal degrees
+lat = latitude in decimal degrees
+elev = elevation in feet
+
+Final dataset
+
+FL_DATE = Date
+origin = 3-characters FAA identifier of the departure airport
+dest = 3-characters FAA identifier of the destination airport
+sum_delays_arrival = cumulative delay for the day in the route origin - dest
+sum_delays_weather = cumulative delay for the day in the route origin - dest, due to weather according to the delays dataset 
+qty_flights = number of flights in the route on the day
+scheduled_el_time = scheduled cumulative duration of the flights
+actual_el_time = actual cumulative duration of the flights
+actual_vs_sch_time = ratio scheduled/actual duration
+sum_cancelled = quantity of cancelled flights on the route on the day
+sum_diverted = quantity of diverted flights on the route on the day
+delays_above_30 = quantity of flights with more than 30 minutes of delay on arrival
+delays_above_15perc= quantity of flights with actual elapsed time above than 115% of scheduled
+count_weather_canc = quantiy of flights cancelled due to weather conditions on the route on the day
+acis_data1.cumulative_pcpn as pcpn_dep = cumulative precipitation at departure airport
+acis_data2.cumulative_pcpn as pcpn_arr= cumulative precipitation at arrival airport
