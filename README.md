@@ -48,10 +48,17 @@ The scalability considerations apply also in terms of access needed by different
 # Files in the repository
 
 create_drop_tables.py: scritp to drop/create the tables in redshift
+
 DataDictionary.txt: codebook of the final tables in redshift
+
 dl.cfg: the template with variables necessary to run the etl. 
+
 etl.py: the main etl process
+
 helper_functions.py: contains the definition of two functions to access the ACIS dataset, necessary for the etl process to run
+
 Readme.md: the present readme file
+
 sql_statements.py: the statements to create, drop and copy data in redshift 
+
 Walktrhough.ipynb: Jupyter notebook detailing the process of accessing data, in particular related to the ACIS web service
